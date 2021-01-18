@@ -1,0 +1,37 @@
+.results{
+    text-align:center;
+    img{
+        padding-top: 40px;
+        height: 200px;
+    }
+
+    .added{
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    h1,p{
+        margin: 0;
+    }
+    h3,h1{
+        font-family: 'Montserrat';
+    }
+    li{
+        padding: 10px;
+        list-style: none;
+        &:nth-child(odd){
+            background: #f3f3f3;
+        }
+    }
+    .tab{
+        text-align: left;
+        margin-bottom: 50px;
+        ul{
+            padding: 0;
+        }
+        h3{
+            text-transform: capitalize;
+            display: inline;
+            border-bottom: 2px solid black;
+        }
+    }
+}

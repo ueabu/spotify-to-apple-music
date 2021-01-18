@@ -1,0 +1,85 @@
+.music{
+    .music-content{
+        padding: 20px 0;
+        background: white;
+        border-radius: 7px;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+        transition: all 200ms cubic-bezier(0.25, 0.1, 0.25, 1);
+        &:hover{
+            box-shadow: 0 10px 10px rgba(0,0,0,0.12);
+            transform: translate(0px, -10px);
+            cursor: pointer;
+            z-index: -100000;
+        }
+        &.active{
+            background:  #CAE9FF;
+        }
+    }
+    img{
+        width: 50%;
+        display: block;
+        margin: 0 auto;
+        border-radius: 7px;
+    }
+    .image-wrapper{
+        height: 110px;
+    }
+    div.right{
+        margin-top: 15px;
+        padding: 5px;
+        font-size: 16px;
+        text-align: center;
+        .name{
+            margin: 0;
+            font-weight: 700;
+            font-size: 16px;
+            font-family: 'Montserrat';
+        }
+        .songs,.duration{
+            font-size:14px;
+        }
+    }
+
+    span.title{
+        display: block;
+    }
+    padding-bottom: 20px;
+    padding-left: 20px;
+    flex-basis: 100%;
+    @media (max-width: 1024px) and (min-width: 730px){
+        flex-basis: 30%;
+    }
+    @media(max-width:730px) and  (min-width:551px){
+        flex-basis: 46%;
+    }
+    @media(min-width: 1025px){
+        flex-basis: 23%;
+    }
+    @media (max-width:550px) {
+        padding: 10px 20px;
+        .music-content{
+            padding: 10px;
+            .image-wrapper{
+                display: inline;
+            }
+            img{
+                width: 20%;
+                display: inline;
+                margin-right: 10px;
+            }
+            .right{
+                display: inline-block;
+                margin: 0;
+                vertical-align: top;
+                text-align: left;
+                width: 70%;
+            }
+            transition: none;
+            &:hover{
+                transform: none;
+                cursor: pointer;
+            }
+        }
+    }
+    text-align: left;
+}

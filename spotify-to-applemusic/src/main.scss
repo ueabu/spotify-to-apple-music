@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap');
+
+$color:#0F0C09;
+$white: #fff;
+$dark-white: #f9f9f9;
+$p : #beb9c1 ;
+
+body{
+    font-family: 'Montserrat';
+    font: 300 1.3rem/1.65 "Montserrat", sans-serif;
+    line-height: 1.5;
+    font-weight: 300;
+    font-size: 16px;
+    padding: 0;
+    margin: 0;
+
+    main{
+        overflow: hidden;
+    }
+    
+    .landing-left{
+        width: 40%;
+        display: inline-block;
+    }
+
+    section{
+        margin: 0 auto;
+    }
+
+    .main-container .btn {
+        display: block;
+        margin: auto;
+        margin-bottom: 40px;
+        background-color: #FB3333;
+        color: white;
+        font-size: 16px;
+        padding: 12px 24px;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+        &:focus{
+          outline: none;
+        }
+      }
+
+      .main-container p {
+        text-align: center;
+      }
+
+    @media (max-width:960px) {
+        .main-container {
+            width: 90%;
+            margin: 0 auto;
+            padding: 0;
+            box-sizing: border-box;
+        }
+    }
+
+    span{
+        display: block;
+    }
+    @media (max-width: 768px){
+        
+    }
+    @media (max-width: 600px){
+        header,footer{
+            padding: 0 20px;
+        }
+        .landing-right{
+            display: none;
+        }
+        .landing-left{
+            width: 100%;
+        }
+    }
+}
+
+// font
+h1{
+    font-family: 'Montserrat';
+}
+button, a{
+    font-family: 'Montserrat';
+    font-weight: 400;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.landingPageImage{
+    display: block;
+    margin: auto;
+    width: 40%;
+    padding-bottom: 30px;
+}
+
+.transferNowButton{
+    display: block;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.screenShots{
+    display: block;
+    margin: auto;
+    padding-top: 20px;
+    width: 90%;
+}
+
+
+
+
