@@ -22,9 +22,9 @@ jobs:
 
     - name: npm install, build, and test
       run: |
+        cd spotify-to-applemusic
         npm install
-        npm run build --if-present
-        npm run test --if-present
+        npm run build
 
     - name: 'Deploy to Azure Web App'
       uses: azure/webapps-deploy@v2
@@ -32,4 +32,4 @@ jobs:
         app-name: 'one-music'
         slot-name: 'production'
         publish-profile: ${{ secrets.AzureAppService_PublishProfile_d6897a6138534f128ca4e878b6585d07 }}
-        package: .
+        package: ./spotify-to-applemusic/build
