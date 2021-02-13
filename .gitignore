@@ -5,3 +5,4 @@ auth-server/node_modules
 spotify-to-applemusic/.eslintcache
 spotify-to-applemusic/package-lock.json
 spotify-to-applemusic/node_modules
+.vscode
