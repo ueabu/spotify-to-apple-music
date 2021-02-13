@@ -1,0 +1,7 @@
+auth-server/apple_private_key.p8
+.DS_Store
+auth-server/package-lock.json
+auth-server/node_modules
+spotify-to-applemusic/.eslintcache
+spotify-to-applemusic/package-lock.json
+spotify-to-applemusic/node_modules

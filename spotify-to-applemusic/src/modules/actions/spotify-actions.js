@@ -116,10 +116,3 @@ export function updateToken(accessToken) {
     payload: accessToken
   }
 }
-
-// export function updateFoundPlaylist(data) {
-//   return {
-//     type: 'UPDATE_PLAYLIST',
-//     payload: data
-//   }
-// }
