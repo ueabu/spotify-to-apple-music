@@ -19,7 +19,8 @@ export async function configure(token){
         })
         .catch((error)=>{
             console.log(error)
-        }) 
+        })
+        
 }
 
 /**
