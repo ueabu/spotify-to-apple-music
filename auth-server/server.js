@@ -7,8 +7,8 @@ let app = express()
 
 // let redirect_uri_login = 'https://onemusicauthserver.azurewebsites.net/callback'
 let redirect_uri_login = 'http://localhost:8888/callback'
-let client_id = '41d986ab7d95461dbec2ab8dceec1eb2'
-let client_secret = 'da151d78a9614b1a82a1c9606afbfbe6'
+let client_id = ''
+let client_secret = ''
 
 app.use(cors())
 
@@ -54,8 +54,8 @@ const jwt = require('jsonwebtoken');
 const fs = require('fs');
 
 const private_key = fs.readFileSync('apple_private_key.p8').toString(); 
-const team_id = 'UM3TSV6QQ6'; 
-const key_id = 'W763UCKPX4'; 
+const team_id = ''; 
+const key_id = ''; 
 const token = jwt.sign({}, private_key, {
   algorithm: 'ES256',
   expiresIn: '180d',
@@ -72,6 +72,6 @@ app.get('/token', function (req, res) {
 });
 
 
-  let port = process.env.PORT || 8888
-  console.log(`Listening on port ${port}. Go /login to initiate authentication flow.`)
-  app.listen(port)
+let port = process.env.PORT || 8888
+console.log(`Listening on port ${port}. Go /login to initiate authentication flow.`)
+app.listen(port)
