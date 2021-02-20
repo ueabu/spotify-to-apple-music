@@ -34,26 +34,6 @@ class Results extends React.Component {
         this.props.addPlaylistToApple(this.props.transfer)
     }
 
-    // static getDerivedStateFromProps(nextProps, prevState) {
-    //     if(nextProps.currentPlaylist !== prevState.currentPlaylist ) {
-    //         return {currentPlaylist: nextProps.currentPlaylist};
-    //       }
-    // }
-
-    // static getDerivedStateFromProps(nextProps, prevState) {
-    //     if (prevState.current_playlist !== nextProps.currentPlaylist) {
-    //         console.log('They were different')
-    //         console.log(prevState.current_playlist )
-    //         console.log(nextProps.currentPlaylist)
-
-    //       return {
-    //         current_playlist: nextProps.currentPlaylist,
-    //       }
-    //     }
-    //     return null
-    //   }
-
-
     componentDidUpdate(prevProps, prevState) {
         if (this.props.transferDone !== prevProps.transferDone) {
             this.setState({
@@ -61,20 +41,6 @@ class Results extends React.Component {
                 not_added: this.props.songsNotFound
             })
         }
-
-        // if (this.props.currentPlaylist !== prevState.currentPlaylist) {
-        //     console.log('they were different')
-        //     this.setState({
-        //         current_playlist: this.props.currentPlaylist
-        //     })
-        // }
-
-        // if (this.props.current_song !== prevState.current_song) {
-        //     this.setState({
-        //         current_song: this.props.current_song
-
-        //     })
-        // }
     }
 
     spinnerCss() {
@@ -89,7 +55,7 @@ class Results extends React.Component {
             <div >
                 <img alt="success" src={success} />
                 <h1>Success!</h1>
-                <p>Your playlists have been added to your Apple account.</p>
+                <p>Your playlists have been added to your Apple Music Account. Wait for 15 - 30 seconds and it should show up on the app.</p>
                 {this.state.not_added.length > 0 ?
                     <div className="added">
                         <h3>These songs could not be added: </h3>
@@ -123,10 +89,11 @@ class Results extends React.Component {
 
                     }}>All the songs were added.</div>
                 }
-                <SocialIcon target="_blank" url="https://www.youtube.com/channel/UCvDqylEzCZJHNea6k1XMkQw" network="youtube" style={{ margin: 10 }} />
-                <SocialIcon target="_blank" url="https://www.instagram.com/umacodes/?igshid=7fb4ipoir4xc" network="instagram" style={{ margin: 10 }} />
-                <SocialIcon target="_blank" url="https://github.com/ueabu/spotify-to-apple-music" network="github" style={{ margin: 10 }} />
-                <p>What to learn how I made this? Checkout the <a href="https://youtube.com">youtube playlist</a> that goes over the high level steps. The code is available on github as well. Feel free to fork and open a PR</p>
+                <SocialIcon target="_blank" url="https://www.youtube.com/channel/UCvDqylEzCZJHNea6k1XMkQw" network="youtube" style={{ margin: 5 }} />
+                <SocialIcon target="_blank" url="https://www.instagram.com/umacodes/?igshid=7fb4ipoir4xc" bgColor='#000000' network="instagram" style={{ margin: 5 }} />
+                <SocialIcon target="_blank" url="https://github.com/ueabu/spotify-to-apple-music" bgColor='#000000' network="github" style={{ margin: 5 }} />
+                <p style={{margin: 10}}>What to learn how I made this? Checkout the <a style={{color: 'red', textDecoration: 'underline'}} href="https://www.youtube.com/watch?v=mS2J0dKcvAA&list=PLzFtdULM-ECKsfdNcUvU6Q1rCLcMC8q_B" target="_blank" rel="noreferrer"><strong>Youtube Playlist</strong></a> that goes over the high level steps. 
+                The code is available on <a style={{color: 'black', textDecoration: 'underline'}} rel="noreferrer" target="_blank" href="https://github.com/ueabu/spotify-to-apple-music" ><strong>Github</strong></a> as well. Feel free to fork and open a <a rel="noreferrer" style={{color: 'black', textDecoration: 'underline'}} target="_blank" href="https://github.com/ueabu/spotify-to-apple-music/pulls" ><strong>Pull Request</strong></a>. All Feedback is welcomed. Feel free to open <a style={{color: 'black', textDecoration: 'underline'}} rel="noreferrer" target="_blank" href="https://github.com/ueabu/spotify-to-apple-music/issues/new"><strong>issues and feature requests</strong></a>.</p>
             </div>
         )
     }

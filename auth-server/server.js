@@ -4,8 +4,6 @@ let querystring = require('querystring')
 let cors = require('cors')
 let app = express() 
 
-
-// let redirect_uri_login = 'https://onemusicauthserver.azurewebsites.net/callback'
 let redirect_uri_login = 'http://localhost:8888/callback'
 let client_id = ''
 let client_secret = ''
@@ -43,7 +41,6 @@ app.get('/callback', function(req, res) {
       var access_token = body.access_token
       let uri = process.env.FRONTEND_URI || 'http://localhost:3000/playlist'
 
-      // let uri = process.env.FRONTEND_URI || 'https://one-music.azurewebsites.net/playlist'
       res.redirect(uri + '?access_token=' + access_token)
     })
   })
@@ -66,9 +63,12 @@ const token = jwt.sign({}, private_key, {
   }
 });
 
+const token_key = ''
 app.get('/token', function (req, res) {
-  res.setHeader('Content-Type', 'application/json');
-  res.send(JSON.stringify({token: token}));
+  if(req.query.key === token_key){
+    res.setHeader('Content-Type', 'application/json');
+    res.send(JSON.stringify({token: token}));
+  }
 });
 
 

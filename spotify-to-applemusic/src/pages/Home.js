@@ -11,9 +11,7 @@ class Home extends React.Component {
     }
 
     showForm = () => {
-        window.location.replace('https://onemusicauthserver.azurewebsites.net/login')
-        // window.location.replace('http://localhost:8888/login')
-
+        window.location.replace('http://localhost:8888/login')
     }
 
     closeForm = () => {
