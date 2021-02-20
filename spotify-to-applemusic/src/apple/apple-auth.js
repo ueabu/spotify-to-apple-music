@@ -6,7 +6,7 @@ const instance = window.MusicKit
  * @param {String} token 
  */
 export async function configure(token){
-    await fetch('http://localhost:8888/token', {mode: 'cors'})
+    await fetch('https://onemusicauthserver.azurewebsites.net/token', {mode: 'cors'})
         .then(response=> response.json())
         .then(res => {
             instance.configure({

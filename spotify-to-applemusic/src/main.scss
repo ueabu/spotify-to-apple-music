@@ -66,11 +66,19 @@ body{
         header,footer{
             padding: 0 20px;
         }
-        .landing-right{
-            display: none;
+        .landing-page{
+            padding-top: 50px;
+            // align-items: center;
         }
+
         .landing-left{
             width: 100%;
+        }
+        .landingPageImage {
+            display: block;
+            margin: auto;
+            width: 100%;
+            // padding-bottom: 30px;
         }
     }
 }
@@ -92,7 +100,7 @@ a{
 .landingPageImage{
     display: block;
     margin: auto;
-    width: 40%;
+    width: 60%;
     padding-bottom: 30px;
 }
 

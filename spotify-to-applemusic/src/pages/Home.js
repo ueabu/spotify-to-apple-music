@@ -10,8 +10,10 @@ class Home extends React.Component {
         }
     }
 
-    showForm = () =>  {
-        window.location.replace('http://localhost:8888/login')
+    showForm = () => {
+        window.location.replace('https://onemusicauthserver.azurewebsites.net/login')
+        // window.location.replace('http://localhost:8888/login')
+
     }
 
     closeForm = () => {
@@ -20,12 +22,14 @@ class Home extends React.Component {
 
     render() {
         return (
-            <section className="landing" >
+            <section className="landing-page" >
                 <div className="main-container">
-                    <div className="landing-right">
+                    <div className="landing-inner-div">
                         <p>Transfer playlists from Spotify to Apple Music.</p>
-                       <button className="btn" onClick={this.showForm}>Transfer To Apple Music</button>
-                       <img className="landingPageImage" src={screenShot} alt="Spotify to Apple music and Apple music to spotify"></img>
+                        <p><strong>Ensure you have accounts with both Spotify and Apple Music before starting.</strong></p>
+
+                        <button className="btn" onClick={this.showForm}>Transfer To Apple Music</button>
+                        <img className="landingPageImage" src={screenShot} alt="Spotify to Apple music and Apple music to spotify"></img>
                     </div>
                 </div>
             </section>

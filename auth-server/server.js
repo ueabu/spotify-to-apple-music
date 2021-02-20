@@ -5,6 +5,7 @@ let cors = require('cors')
 let app = express() 
 
 
+// let redirect_uri_login = 'https://onemusicauthserver.azurewebsites.net/callback'
 let redirect_uri_login = 'http://localhost:8888/callback'
 let client_id = '41d986ab7d95461dbec2ab8dceec1eb2'
 let client_secret = 'da151d78a9614b1a82a1c9606afbfbe6'
@@ -41,6 +42,8 @@ app.get('/callback', function(req, res) {
     request.post(authOptions, function(error, response, body) {
       var access_token = body.access_token
       let uri = process.env.FRONTEND_URI || 'http://localhost:3000/playlist'
+
+      // let uri = process.env.FRONTEND_URI || 'https://one-music.azurewebsites.net/playlist'
       res.redirect(uri + '?access_token=' + access_token)
     })
   })

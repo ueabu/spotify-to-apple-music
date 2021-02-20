@@ -4,15 +4,15 @@ export function getSpotifyPlaylists(tokenjson) {
 
     let accessToken = tokenjson.access_token
     var getPlaylistURL = baseSpotifyAPI + '/me/playlists?limit=50';
-    var getLikedSongsURL = baseSpotifyAPI + '/me/tracks';
+    // var getLikedSongsURL = baseSpotifyAPI + '/me/tracks';
 
     return Promise.all([
         new Promise((resolve, reject) => {
             getAllDataRecursively(getPlaylistURL, [], resolve, reject, accessToken) //Fetch Playlists
         }),
-        new Promise((resolve, reject) => {
-            getAllDataRecursively(getLikedSongsURL, [], resolve, reject, accessToken) //Fetch liked song
-        })
+        // new Promise((resolve, reject) => {
+        //     getAllDataRecursively(getLikedSongsURL, [], resolve, reject, accessToken) //Fetch liked song
+        // })
     ])
 }
 

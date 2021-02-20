@@ -39,7 +39,6 @@ class Playlist extends React.Component {
         if (this.props.transferReady !== prevProps.transferReady) {
             apple_auth.LogIn()
                 .then((res) => {
-                    console.log(res)
                     if (res) {
                         this.props.history.push({
                             pathname: '/result',
@@ -85,9 +84,19 @@ class Playlist extends React.Component {
     render() {
         return (
             <div className="playlist">
+                {
+                    this.state.loading ? <p>Fetching playlists you own ...</p>
+                    :
+                    <p>Showing playlists you own. Select the Playlists you want to transfer</p>
+                }
+                
+
+
+                <div className="playlist-inner">
                 <div className="button-wrapper">
                     <button onClick={this.transferToApple}>Transfer Selected Playlists To Apple Music</button>
                 </div>
+
                 {(this.state.loading ? <ScaleLoader css={this.spinnerCss()} size={150} color={"#123abc"} /> : ' ')}
                 {this.state.loading ? '' :
                     this.state.parsedJsonData.map((data) => {
@@ -103,6 +112,7 @@ class Playlist extends React.Component {
                         />)
                     })
                 }
+                </div>
             </div>
         );
     }

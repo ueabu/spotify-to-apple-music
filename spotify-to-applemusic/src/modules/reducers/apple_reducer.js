@@ -1,6 +1,8 @@
 const defaultState = {
   songsNotFound: [],
-  transferDone: false
+  transferDone: false,
+  currentPlaylist: '',
+  currentSong: ''
 }
 
 export default function apple_reducer(state = defaultState, action) {
@@ -14,6 +16,17 @@ export default function apple_reducer(state = defaultState, action) {
       return {
         ...state,
         transferDone: action.payload,
+      }
+    case 'UPDATE_CURRENT_PLAYLIST':
+      console.log(action.payload)
+      return {
+        ...state,
+        currentPlaylist: action.payload,
+      }
+    case 'UPDATE_CURRENT_SONG':
+      return {
+        ...state,
+        currentSong: action.payload,
       }
     default:
       return state;

@@ -1,5 +1,13 @@
-.playlist{
-    padding-top: 40px;
+.playlist p{
+    padding-left: 40px;
+    @media (max-width:542px) {
+        padding-left: 20px;
+    }
+}
+
+
+.playlist-inner{
+    padding-top: 20px;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;

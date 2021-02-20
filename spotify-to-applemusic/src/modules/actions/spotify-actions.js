@@ -1,4 +1,4 @@
-import { getSpotifyPlaylists, extractSongName, fetchAllTracksFromGivenPlaylists } from '../../spotify/spotify'
+import { getSpotifyPlaylists, fetchAllTracksFromGivenPlaylists } from '../../spotify/spotify'
 import spotify_default from '../../svg/Spotify-liked-track.jpg'
 import { store } from '../store/store';
 
@@ -13,14 +13,14 @@ export function fetchSpotifyPlaylists(data) {
         var tempMap = {};
 
         //Adding the liked tracks as part of our playlists
-        playlistData.push({
-          name: 'Liked Songs',
-          no_of_songs: response[1].length,
-          playlist_owner: response[0][0].owner.display_name,
-          image: spotify_default,
-          id: 'allthelikedsongsid',
-          isChecked: false,
-        })
+        // playlistData.push({
+        //   name: 'Liked Songs',
+        //   no_of_songs: response[1].length,
+        //   playlist_owner: response[0][0].owner.display_name,
+        //   image: spotify_default,
+        //   id: 'allthelikedsongsid',
+        //   isChecked: false,
+        // })
 
         //Parsing playlist for our client side
         response[0].forEach((response_item) => {
@@ -43,23 +43,23 @@ export function fetchSpotifyPlaylists(data) {
 
 
         //Parsing the liked song for future purposes    
-        response[1].forEach((song) => {
-          let curItemSong = {};
-          //Song parameters
-          curItemSong["trackName"] = extractSongName(song.track.name);
-          curItemSong["artistName"] = [];
-          song.track.artists.forEach((artist) => {
-            curItemSong["artistName"].push(artist.name)
-          })
-          // add album parameters
-          curItemSong["albumName"] = song.track.album.name
-          curItemSong["albumArtist"] = []
-          song.track.album.artists.forEach((artist) => {
-            curItemSong["albumArtist"].push(artist.name)
-          })
+        // response[1].forEach((song) => {
+        //   let curItemSong = {};
+        //   //Song parameters
+        //   curItemSong["trackName"] = extractSongName(song.track.name);
+        //   curItemSong["artistName"] = [];
+        //   song.track.artists.forEach((artist) => {
+        //     curItemSong["artistName"].push(artist.name)
+        //   })
+        //   // add album parameters
+        //   curItemSong["albumName"] = song.track.album.name
+        //   curItemSong["albumArtist"] = []
+        //   song.track.album.artists.forEach((artist) => {
+        //     curItemSong["albumArtist"].push(artist.name)
+        //   })
 
-          likedSongData.push(curItemSong)
-        })
+        //   likedSongData.push(curItemSong)
+        // })
 
         dispatch({
           type: 'UPDATE_PLAYLIST',

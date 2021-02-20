@@ -7,7 +7,7 @@
     "test": "npm test",
     "start": "node server.js"
   },
-  "author": "Uma Abu",
+  "author": "Uma Abu - One Music",
   "license": "MIT",
   "dependencies": {
     "cors": "^2.8.5",

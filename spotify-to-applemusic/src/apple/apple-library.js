@@ -9,6 +9,7 @@ export function addToAppleLibrary() {
     var songsInPlaylists = [];
  
     playlistToTransfer.forEach((playlist) => {
+        // store.dispatch(updateCurrentSearchingPlaylist(playlist.name))
 
         songsInPlaylists = [];
         playlist.tracks.forEach((item) => {

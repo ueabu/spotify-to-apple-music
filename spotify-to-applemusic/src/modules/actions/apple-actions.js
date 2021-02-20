@@ -19,3 +19,17 @@ export function updateTransferFinished() {
         payload: true
     }
 }
+
+export function updateCurrentSearchingSong(data) {
+    return {
+        type: 'UPDATE_CURRENT_SONG',
+        payload: data
+    }
+}
+
+export function updateCurrentSearchingPlaylist(data) {
+    return {
+        type: 'UPDATE_CURRENT_PLAYLIST',
+        payload: data
+    }
+}
