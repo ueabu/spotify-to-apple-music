@@ -1,7 +1,13 @@
-# Spotify To Apple Music
+# Spotify To Apple Music Transfer
 
-This project contains the source code for the one music project that transfer playlist/songs from spotify to apple
-music. The project is live here : https://one-music.azurewebsites.net/
+## Table of Contents
+1. Folders
+2. Logic
+3. Instructions
+
+This project contains the source code for the music project that transfer playlist/songs from spotify to apple
+music. The project is no longer live on Azure, but can be hosted on your local machine as you will see
+later in the following sections.
 
 ## Folders
 The project contains two node apps, one is node authentication server, `auth-server`, that handles obtaining spotify tokens, and generating apple music tokens. The second is the `spotify-to-applemusic` React client app that uses the obtained tokens to make direct calls to the Spotify and Apple Music API. 
