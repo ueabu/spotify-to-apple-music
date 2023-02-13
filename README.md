@@ -23,6 +23,11 @@ you $99.
 #### Note: You may have to wait up to 48 hours to get your apple developer account approved.
 
 ### Spotify Developer Account Setup
+To sign up for a developer account use this link: https://developer.spotify.com/ .
+Once you get on the site, go to the dashboard tab section and you should see an image similar to
+the one below, but with no app created. Once you have created an app you can name it whatever you would
+like and retrieve the client id and client secret.
+
 
 <img width="941" alt="Spotify Developer Account" src="https://user-images.githubusercontent.com/73921414/218345782-3e915464-6a37-4953-a668-41716469cd7f.PNG">
 
