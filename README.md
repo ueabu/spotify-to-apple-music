@@ -29,9 +29,15 @@ the one below, but with no app created. Once you have created an app you can nam
 like and retrieve the client id and client secret.
 
 
+
 <img width="941" alt="Spotify Developer Account" src="https://user-images.githubusercontent.com/73921414/218345782-3e915464-6a37-4953-a668-41716469cd7f.PNG">
 
 ### Apple Developer Account Setup
+Use this link to signup for the developer account: https://developer.apple.com/ .
+Once you have created the account you may have to wait 24 to 48 hours to have your account approved. After 
+the approval, you should see the screen below and should be prepared to move to the instructions 
+section.
+
 
 <img width="860" alt="Identifier_AppleDev" src="https://user-images.githubusercontent.com/73921414/218345141-32cbbf3e-c8e9-4587-8caf-f5910315a420.PNG">
 
